@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const mongoose = require('mongoose');
 const validator = require('validator');
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -38,6 +39,8 @@ const userSchema = new mongoose.Schema({
       message: 'Passwords are not the same!',
     },
     passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
   },
 });
 
@@ -74,6 +77,25 @@ userSchema.methods.changedPasswordAfter = function (JTWTimestamp) {
 
   // False means NOT changed.
   return false;
+};
+
+userSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  // Encrypt the token in the database so that even if database was
+  // jeoperdized, hackers would not have the actual token.
+  this.passwordResetToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+
+  console.log({ resetToken }, this.passwordResetToken);
+
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+
+  console.log(this);
+
+  return resetToken;
 };
 
 const User = mongoose.model('User', userSchema);
