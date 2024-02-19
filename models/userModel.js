@@ -56,6 +56,14 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+userSchema.pre('save', function (next) {
+  if (!this.isModified('password') || this.isNew) return next();
+
+  // To assure that the time stamp is sooner than the token being generated.
+  this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
 // Instance method: it's going to be available
 // on all document on certain collection
 userSchema.methods.correctPassword = async function (
