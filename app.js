@@ -34,13 +34,8 @@ app.use('/api', limiter);
 // Body parser, reading data from body into req.body.
 app.use(express.json({ limit: '10kb' })); // This only accepts data less than 10kb
 
-// Data sanitization against NoSQL query injection
-// mongoSanitize looks at req body and query string, and req.params,
-// remove all the $ sign and dots.
+// Data sanitization
 app.use(mongoSanitize());
-
-// Data sanitization against XSS
-// This would clean any user input from malicious HTML code.
 app.use(xss());
 
 // Prevent parameter polution.
