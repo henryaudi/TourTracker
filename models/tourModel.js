@@ -86,11 +86,6 @@ const tourSchema = new mongoose.Schema(
   },
 );
 
-// Virtual property will be created each time we get something out of the database.
-// "get" here is a getter.
-// We use actual function here instead of arrow function bc we need
-// to access the this keyword, and arrow function doesn't allow so. "this" keyword will
-// be pointing to the current document.
 tourSchema.virtual('durationWeeks').get(function () {
   return this.duration / 7;
 });

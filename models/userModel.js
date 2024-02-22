@@ -75,8 +75,6 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
-// Instance method: it's going to be available
-// on all document on certain collection
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword,
