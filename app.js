@@ -11,6 +11,7 @@ const AppError = require('./utils/appError');
 const globalErrorHanlder = require('./controllers/errorController');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
 
@@ -61,13 +62,11 @@ app.use((req, res, next) => {
   next();
 });
 
-// This is called mounting router, we
-// mount a router on a route.
+// Mount the router to a path
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
-// all() covers all the http methods.
-// * stands for everything.
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
