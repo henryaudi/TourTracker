@@ -16,7 +16,7 @@ router
   .route('/monthly-plan/:year')
   .get(
     authController.protect,
-    authController.restrictTo('admin', 'lead-guide'),
+    authController.restrictTo('admin', 'lead-guide', 'guide'),
     tourController.getMonthlyPlan,
   );
 
