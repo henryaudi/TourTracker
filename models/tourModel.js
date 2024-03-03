@@ -175,12 +175,12 @@ tourSchema.post(/^find/, function (docs, next) {
 
 // AGGREGATION MIDDLEWARE
 // this keyword is going to point at the aggregation object.
-tourSchema.pre('aggregate', function (next) {
-  // Since pipeline is an array, we use unshift to add at the begining of the array.
-  this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+// tourSchema.pre('aggregate', function (next) {
+//   // Since pipeline is an array, we use unshift to add at the begining of the array.
+//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
 
-  next();
-});
+//   next();
+// });
 
 const Tour = mongoose.model('Tour', tourSchema);
 
