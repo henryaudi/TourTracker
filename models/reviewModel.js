@@ -86,7 +86,7 @@ reviewSchema.post(/^findOneAnd/, async function (next) {
   await this.r.constructor.calcAverageRatings(this.r.tour);
 });
 
-// Create "Review" table by the Review schema.
+// Create "Review" model by the Review schema.
 const Review = mongoose.model('Review', reviewSchema);
 
 module.exports = Review;
