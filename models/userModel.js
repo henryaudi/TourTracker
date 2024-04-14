@@ -113,6 +113,7 @@ userSchema.methods.createPasswordResetToken = function () {
   return resetToken;
 };
 
+// Create "User" table by the user schema.
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

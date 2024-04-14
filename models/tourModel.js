@@ -182,6 +182,7 @@ tourSchema.post(/^find/, function (docs, next) {
 //   next();
 // });
 
+// Create "Tour" table by the Tour schema.
 const Tour = mongoose.model('Tour', tourSchema);
 
 module.exports = Tour;
