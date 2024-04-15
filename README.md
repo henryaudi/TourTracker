@@ -71,7 +71,7 @@ The Tour Tracker API requires a connection to a MongoDB database and some other 
 
 For detailed interactive API documentation, please visit my [API documentation 🔗](https://documenter.getpostman.com/view/28470041/2sA3Bj8E2s).
 
-## Author
+## 🚀 About me
 **Shangjie Zheng**
 
 - **Affiliation:** Southern Methodist University
