@@ -1,4 +1,4 @@
-# 🏝️ Tour Tracking API ✈️
+# 🏝️ Tour Tracker API ✈️
 
 [![API Documentation](https://img.shields.io/badge/Documentation-view-blue)](https://documenter.getpostman.com/view/28470041/2sA3Bj8E2s)
 
