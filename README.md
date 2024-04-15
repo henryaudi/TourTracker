@@ -27,5 +27,18 @@ To get the Tour Tracker API up and running on your local machine, follow these s
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/henryaudi/TourTracker.git
-   cd tour-tracker-api
+   cd TourTracker
    ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+### Configuration
+
+The Tour Tracker API requires a connection to a MongoDB database and some other environment-specific variables. Follow these steps to configure your environment:
+
+1. **MongoDB Database Setup:**
+   - If you don’t have MongoDB installed, download and install it from MongoDB's official site.
+   - Alternatively, set up a cloud-based MongoDB instance using MongoDB Atlas.
+   - Once your database is set up, note down the connection string, as you will need it to configure your application.
