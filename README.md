@@ -64,4 +64,7 @@ The Tour Tracker API requires a connection to a MongoDB database and some other 
    ```
    2. **Testing API Endpoints:**
    Use Postman or any other API testing tool to test the endpoints. Import the Postman collection provided in the documentation to quickly start interacting with the API.
-   
+
+## 🚀 Documentation
+
+For detailed interactive API documentation, please visit my [API documentation 🔗](https://documenter.getpostman.com/view/28470041/2sA3Bj8E2s).
