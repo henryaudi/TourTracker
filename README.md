@@ -42,3 +42,26 @@ The Tour Tracker API requires a connection to a MongoDB database and some other 
    - If you don’t have MongoDB installed, download and install it from MongoDB's official site.
    - Alternatively, set up a cloud-based MongoDB instance using MongoDB Atlas.
    - Once your database is set up, note down the connection string, as you will need it to configure your application.
+2. **Environment Variables**
+   - Create a new file in the root directory of the project and save it as `config.env`.
+   - Populate the `config.env` file with the following key-value pairs, replacing the placeholder text with your own data:
+     ```plaintext
+      NODE_ENV=development
+      PORT=8000
+      DATABASE=<Your_MongoDB_Connection_String>
+      JWT_SECRET=<Your_JWT_Secret>
+      JWT_EXPIRES_IN=90d <OR another time span as you prefer>
+      JWT_COOKIE_EXPIRES_IN=90 <OR another time span as you prefer>
+      EMAIL_USERNAME=<Your_Mailtrap_Username>
+      EMAIL_PASSWORD=<Your_Mailtrap_Password>
+      EMAIL_HOST=sandbox.smtp.mailtrap.io
+      EMAIL_PORT=25
+     ```
+### Running the server
+   1. **Start the server:** (default would be in development mode)
+   ```bash
+   npm run start
+   ```
+   2. **Testing API Endpoints:**
+   Use Postman or any other API testing tool to test the endpoints. Import the Postman collection provided in the documentation to quickly start interacting with the API.
+   
