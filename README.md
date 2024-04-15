@@ -1,5 +1,7 @@
 # 🏝️ Tour Tracking API ✈️
 
+[![API Documentation](https://img.shields.io/badge/documentation-view-blue)](https://documenter.getpostman.com/view/28470041/2sA3Bj8E2s)
+
 Welcome to the Tour Tracker API, where we streamline the journey of discovering and booking tours while seamlessly integrating user feedback through reviews! Designed with the modern traveler in mind, this API facilitates a robust platform for managing tours, user profiles, and real-time reviews, providing a comprehensive toolset for system operators and users alike.
 
 ## 🚀 Features 
