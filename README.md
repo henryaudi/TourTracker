@@ -26,6 +26,6 @@ To get the Tour Tracker API up and running on your local machine, follow these s
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/tour-tracker-api.git
+   git clone https://github.com/henryaudi/TourTracker.git
    cd tour-tracker-api
    ```
